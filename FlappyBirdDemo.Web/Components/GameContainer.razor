@@ -1,4 +1,4 @@
-﻿<div class="game-container" @onclick="_gameManager.StartGame">
+﻿<div class="game-container" tabindex="0" @onclick="_gameManager.StartGame" @onkeyup="HandleKeyUp">
     <div class="sky">
         <Bird Model="_gameManager.Bird" />
     </div>
@@ -15,6 +15,14 @@
     {
         _gameManager = new GameManager();
         _gameManager.MainLoopCompleted += (o, e) => StateHasChanged();
+    }
+
+    void HandleKeyUp(KeyboardEventArgs e)
+    {
+        if (e.Key == " ")
+        {
+            _gameManager.Bird.Jump();
+        }
     }
 
 }

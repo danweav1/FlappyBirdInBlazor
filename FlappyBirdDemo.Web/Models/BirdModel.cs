@@ -2,11 +2,17 @@
 {
     public class BirdModel
     {
-        public int DistanceFormGround { get; set; } = 100;
+        public int DistanceFromGround { get; set; } = 100;
+        public int JumpStrength { get; private set; } = 50;
 
         public void Fall(int gravity)
         {
-            DistanceFormGround -= gravity;
+            DistanceFromGround -= gravity;
+        }
+
+        public void Jump()
+        {
+            DistanceFromGround += JumpStrength;
         }
     }
 }

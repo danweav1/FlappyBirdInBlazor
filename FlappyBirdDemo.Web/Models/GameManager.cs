@@ -27,7 +27,7 @@ namespace FlappyBirdDemo.Web.Models
                 Bird.Fall(_gravity);
                 Pipe.Move();
 
-                if (Bird.DistanceFormGround <= 0)
+                if (Bird.DistanceFromGround <= 0)
                 {
                     GameOver();
                 }
