@@ -14,7 +14,7 @@
     protected override void OnInitialized()
     {
         _gameManager = new GameManager();
-        _gameManager.PropertyChanged += (o, e) => StateHasChanged();
+        _gameManager.MainLoopCompleted += (o, e) => StateHasChanged();
     }
 
 }
