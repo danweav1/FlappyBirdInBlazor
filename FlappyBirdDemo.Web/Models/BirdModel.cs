@@ -5,6 +5,11 @@
         public int DistanceFromGround { get; set; } = 100;
         public int JumpStrength { get; private set; } = 50;
 
+        public bool IsOnGround()
+        {
+            return DistanceFromGround <= 0;
+        }
+
         public void Fall(int gravity)
         {
             DistanceFromGround -= gravity;

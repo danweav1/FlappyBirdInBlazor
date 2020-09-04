@@ -4,7 +4,10 @@
     </div>
     <div class="ground"></div>
 
-    <Pipe Model="_gameManager.Pipe" />
+    @foreach (var pipe in _gameManager.Pipes)
+    {
+        <Pipe Model="pipe" />
+    }
 </div>
 
 @code {
