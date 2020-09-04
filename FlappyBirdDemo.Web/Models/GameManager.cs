@@ -46,6 +46,14 @@ namespace FlappyBirdDemo.Web.Models
             }
         }
 
+        public void Jump()
+        {
+            if (IsRunning)
+            {
+                Bird.Jump();
+            }
+        }
+
         public void GameOver()
         {
             IsRunning = false;

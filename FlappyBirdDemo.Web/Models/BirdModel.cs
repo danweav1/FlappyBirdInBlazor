@@ -12,7 +12,10 @@
 
         public void Jump()
         {
-            DistanceFromGround += JumpStrength;
+            if (DistanceFromGround <= 530)
+            {
+                DistanceFromGround += JumpStrength;
+            }
         }
     }
 }
